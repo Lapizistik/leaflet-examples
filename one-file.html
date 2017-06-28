@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+		<meta charset="utf-8" />
+    <title>Leaflet example in one file</title>
+
+		<!-- include leaflet css and javascript -->
+		<link rel="stylesheet" crossorigin=""
+				href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+		<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js"
+						crossorigin=""></script>
+
+		<style type="text/css">
+			#map {
+			  height: 300px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1><a href="http://leafletjs.com/">Leaflet</a> example in one file</h1>
+		<p>
+			This is the self-contained one-file-version for a
+			<a href="http://leafletjs.com/">leaflet</a> map.
+			For a version with CSS and Javascript in different files see
+			<a href="index.html">index.html</a>. For a leaflet map without
+			Javascript programming try
+			<a href="https://lapizistik.github.io/leaflet-easymap/">Leasymap</a>.
+		</p>
+		<p>
+			Find the <a href="https://github.com/Lapizistik/leaflet-examples">source
+				code on Github</a>.
+		</p>
+		<p>
+			The one important thing is that the #map div needs a <em>height</em>
+			to be visible.
+		</p>
+		<div id="map"></div>
+
+		<script>
+			/*
+			the script mus be loaded after the map div is defined,
+			otherwise this will not work. Therefore the script is below
+			the div.
+
+			The source code below is the example from the leaflet start page.
+			*/
+			
+			var map = L.map('map').setView([51.505, -0.09], 13);
+
+			L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+			  attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+			}).addTo(map);
+
+			L.marker([51.5, -0.09]).addTo(map)
+			 .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+			 .openPopup();
+		</script>
+	</body>
+</html>

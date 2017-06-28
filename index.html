@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+		<meta charset="utf-8" />
+    <title>Leaflet example</title>
+
+		<!-- include leaflet css and javascript -->
+		<link rel="stylesheet" crossorigin=""
+				href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+		<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js"
+						crossorigin=""></script>
+
+		<!-- include our own css -->
+		<link rel="stylesheet" href="leaflet-example.css" />
+
+		<!-- we include the javascript at the bottom, see below -->
+	</head>
+
+	<body>
+		<h1><a href="http://leafletjs.com/">Leaflet</a> example in one file</h1>
+		<p>
+			This is the html template for a <a href="http://leafletjs.com/">leaflet</a>
+			map. CSS and Javascript
+			are in different files. For a self-contained one-file-version see
+			<a href="one-file.html">one-file.html</a>. For a leaflet map without
+			Javascript programming try
+			<a href="https://lapizistik.github.io/leaflet-easymap/">Leasymap</a>.
+		</p>
+		<p>
+			Find the <a href="https://github.com/Lapizistik/leaflet-examples">source
+				code on Github</a>.
+		</p>
+		<p>
+			The one important thing is that the #map div needs a <em>height</em>
+			to be visible.
+		</p>
+		<div id="map"></div>
+
+		<!-- include our own javascript -->
+		<script src="leaflet-example.js"></script>
+
+	</body>
+</html>
