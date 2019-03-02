@@ -9,6 +9,7 @@
  */
 
 var map = L.map('map').setView([39.962221, -83.000642], 13);
+var marker = L.marker([39.962, -83.000]).addTo(map);
 
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
